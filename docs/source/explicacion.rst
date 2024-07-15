@@ -5,6 +5,7 @@ Explicacion
 Aqui se van a detallar mas sobre las funcione que tiene la libreria de 
 optimizacion
 
+Método de división de intervalos por la mitad
 .. code-block:: python
 
     def interval_halving(a,b,e,funcion):
@@ -35,6 +36,7 @@ optimizacion
             if abs(L) < e:
                 return [x1,x2]
 
+Búsqueda de Fibonacci
 .. code-block:: python
     def fibonacci_search(a,b,n,funcion):
             #step 1
@@ -59,6 +61,7 @@ optimizacion
                 k = k+1
             return [x1,x2]
 
+Método de la sección dorada
 .. code-block:: python
     def golden_section_search(funcion, a, b, epsilon):
             
@@ -88,6 +91,7 @@ optimizacion
 
             return [a, b]
 
+Método de Newton-Raphson
 .. code-block:: python
     def newton_raphson_method(funcion, i_guess, delta_fun, epsilon):
             x = i_guess
@@ -113,6 +117,7 @@ optimizacion
             
             return x
 
+Método de bisección
 .. code-block:: python
     def bisection_method(funcion, a, b, epsilon, delta_x):
             x1 = a
@@ -141,6 +146,7 @@ optimizacion
 
             return [x1, x2]
 
+Método de la secante
 .. code-block:: python
     def secant_method(funcion, a, b, epsilon, delta_x):
             x1 = a
@@ -169,6 +175,7 @@ optimizacion
 
             return [x1, x2]
 
+Caminata aleatoria
 .. code-block:: python
     def met_random_walk(funcion,x0,epsilon,max_iter):
 
@@ -187,6 +194,7 @@ optimizacion
 
             return x_mejor
 
+Método de Nelder y Mead (Simplex)
 .. code-block:: python
     def simplex_search_meth(x,func,gama=2.0,beta=0.2,epsilon=0.001):
             # step 1
@@ -234,6 +242,7 @@ optimizacion
                     break
             return xnew
 
+Metodo nelder mead
 .. code-block:: python
     def nelder_mead(func, x_start, tol=1e-6, max_iter=1000):
             # Parámetros del algoritmo
@@ -303,6 +312,7 @@ optimizacion
             
             return f_values[0]
 
+Método de Hooke-Jeeves
 .. code-block:: python
     def hooke_jeeves(func, x0, step_size=0.5, step_reduction=0.5, tolerance=1e-6, max_iterations=1000):
             n = len(x0)
@@ -334,6 +344,7 @@ optimizacion
 
             return x
 
+Método de Cauchy
 .. code-block:: python
     def cauchy(funcion,x0,epsilon1,epsilon2,M):
 
@@ -362,6 +373,7 @@ optimizacion
                         xk = x_k1
             return xk
 
+Método de Fletcher-Reeves
 .. code-block:: python
     def gradiente_conjugado(funcion,x,epsilon1,epsilon2,epsilon3):
             #step 1
@@ -396,6 +408,7 @@ optimizacion
                 if k == 1000:
                     terminar = 1
 
+Método de Newton
 .. code-block:: python
     def newton_method(funcion,x0,epsilon1,epsilon2,M):
             # step1
