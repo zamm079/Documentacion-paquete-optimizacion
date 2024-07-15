@@ -344,3 +344,77 @@ Metodo Nelder
                     break
             
             return f_values[0]
+
+
+Método de Hooke-Jeeves
+
+
+.. code-block:: python
+
+    def hooke_jeeves(func, x0, step_size=0.5, step_reduction=0.5, tolerance=1e-6, max_iterations=1000):
+            n = len(x0)
+            x = np.array(x0)
+            best = np.copy(x)
+            step = np.full(n, step_size)
+
+            def explore(base_point, step_size):
+                new_point = np.copy(base_point)
+                for i in range(n):
+                    for direction in [1, -1]:
+                        candidate = np.copy(new_point)
+                        candidate[i] += direction * step_size[i]
+                        if func(candidate) < func(new_point):
+                            new_point = candidate
+                            break
+                return new_point
+
+            iteration = 0
+            while np.max(step) > tolerance and iteration < max_iterations:
+                new_point = explore(x, step)
+                if func(new_point) < func(x):
+                    best = new_point + (new_point - x)
+                    x = new_point
+                else:
+                    step = step * step_reduction
+                iteration += 1
+                # print(f"Iteration {iteration}, x: {x}, f(x): {func(x)}")
+
+            return x
+
+
+Métodos de gradiente
+
+Método de Cauchy
+
+
+.. code-block:: python
+
+    def cauchy(funcion,x0,epsilon1,epsilon2,M):
+
+            terminar=False
+            xk=x0
+            k=0
+            while not terminar:
+                grad = np.array(gradiente(funcion,xk))
+
+                if np.linalg.norm(grad) < epsilon1 or k >= M:
+                    terminar=True
+                else:
+
+                    def alpha_funcion(alpha):
+                        return funcion(xk-alpha*grad)
+                    
+                    alpha = busquedaDorada(alpha_funcion,epsilon=epsilon2,a=0.0,b=1.0)
+                    x_k1 = xk - alpha*grad
+                    
+
+                    if np.linalg.norm(x_k1-xk)/(np.linalg.norm(xk)+0.00001) <= epsilon2:
+                        
+                        terminar = True
+                    else:
+                        k = k+1
+                        xk = x_k1
+            return xk
+
+
+Método de Fletcher-Reeves
