@@ -3,20 +3,21 @@ Usage
 
 .. _installation:
 
-Installation
+Instalacion
 ------------
 
-To use Lumache, first install it using pip:
+Para poder usar la libreria primero se debe instalar, usa pip:
 
 .. code-block:: console
 
-   (.venv) $ pip install lumache
+   pip install Paquete-optimizacion-byzamm079
 
-Creating recipes
+
+Como llamarlo
 ----------------
 
-To retrieve a list of random ingredients,
-you can use the ``lumache.get_random_ingredients()`` function:
+Para poder mandar a llamr las funciones debes de usar el 
+comando from ``from metod_univariable import metodos_elim_regiones``
 
 .. autofunction:: lumache.get_random_ingredients
 
