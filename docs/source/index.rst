@@ -18,7 +18,7 @@ La optimización tiene un amplio atractivo porque es aplicable en todos los domi
 .. toctree::
 
    usage
-   api
+   funciones
 
 
 
