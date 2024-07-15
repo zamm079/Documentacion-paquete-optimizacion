@@ -36,6 +36,7 @@ Método de división de intervalos por la mitad
             L = b-a
             if abs(L) < e:
                 return [x1,x2]
+..
 
 Búsqueda de Fibonacci
 
@@ -62,6 +63,7 @@ Búsqueda de Fibonacci
                 #step 4
                 k = k+1
             return [x1,x2]
+..
 
 Método de la sección dorada
 
@@ -93,6 +95,7 @@ Método de la sección dorada
                     f_x2 = funcion(w2)
 
             return [a, b]
+..
 
 Método de Newton-Raphson
 
@@ -120,6 +123,7 @@ Método de Newton-Raphson
                 k += 1
             
             return x
+..
 
 Método de bisección
 
@@ -150,6 +154,7 @@ Método de bisección
                 iteraciones += 1
 
             return [x1, x2]
+..
 
 Método de la secante
 
@@ -180,6 +185,7 @@ Método de la secante
                 i += 1
 
             return [x1, x2]
+..
 
 Caminata aleatoria
 
@@ -200,6 +206,7 @@ Caminata aleatoria
                 iteraciones += 1
 
             return x_mejor
+..
 
 Método de Nelder y Mead (Simplex)
 
@@ -249,6 +256,7 @@ Método de Nelder y Mead (Simplex)
                 if term1**0.5 < epsilon:
                     break
             return xnew
+..
 
 Metodo nelder mead
 
@@ -320,6 +328,7 @@ Metodo nelder mead
                     break
             
             return f_values[0]
+..
 
 Método de Hooke-Jeeves
 
@@ -353,6 +362,7 @@ Método de Hooke-Jeeves
                 # print(f"Iteration {iteration}, x: {x}, f(x): {func(x)}")
 
             return x
+..
 
 Método de Cauchy
 
@@ -383,6 +393,7 @@ Método de Cauchy
                         k = k+1
                         xk = x_k1
             return xk
+..
 
 Método de Fletcher-Reeves
 
@@ -419,6 +430,7 @@ Método de Fletcher-Reeves
                     k = k+1
                 if k == 1000:
                     terminar = 1
+..
 
 Método de Newton
 
