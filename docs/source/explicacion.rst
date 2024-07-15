@@ -41,7 +41,7 @@ Método de división de intervalos por la mitad
 Búsqueda de Fibonacci
 
 .. code-block:: python
-    
+
     def fibonacci_search(a,b,n,funcion):
             #step 1
             L = b-a
@@ -64,3 +64,35 @@ Búsqueda de Fibonacci
                 #step 4
                 k = k+1
             return [x1,x2]
+
+
+Golden Section Search 
+
+.. code-block:: python
+    def golden_section_search(funcion, a, b, epsilon):
+            
+            golden = 0.618
+            golden2 = 1 - golden
+
+            w1 = a + golden2 * (b - a)
+            w2 = a + golden * (b - a)
+
+            f_x1 = funcion(w1)
+            f_x2 = funcion(w2)
+
+            while b - a > epsilon:
+                
+                if f_x1 < f_x2:
+                    b = w2
+                    w2 = w1
+                    w1 = a + golden2 * (b - a)
+                    f_x2 = f_x1
+                    f_x1 = funcion(w1)
+                else:
+                    a = w1
+                    w1 = w2
+                    w2 = a + golden * (b - a)
+                    f_x1 = f_x2
+                    f_x2 = funcion(w2)
+
+            return [a, b]
