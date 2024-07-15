@@ -1,4 +1,5 @@
-instalacion
+===========
+Instalacion
 ===========
 
 Para poder usar esta libreria es necsario primero instalarla, usa pip
@@ -10,7 +11,7 @@ Para poder usar esta libreria es necsario primero instalarla, usa pip
 Une vez hecho esto puedes mandar a llamr las funciones como en el siguiente ejemplo:
 
 .. code-block:: python
-    
+
     from metod_univariable import metodos_elim_regiones
     from metod_univariable import metodos_basado_derivada
 
