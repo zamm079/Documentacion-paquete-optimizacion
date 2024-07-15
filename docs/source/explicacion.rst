@@ -418,3 +418,82 @@ Método de Cauchy
 
 
 Método de Fletcher-Reeves
+
+
+.. code-block:: python
+
+    def gradiente_conjugado(funcion,x,epsilon1,epsilon2,epsilon3):
+            #step 1
+            x0 = x
+            #step 2
+            grad = np.array(gradiente(funcion,x))
+            s0 = -(grad)
+            #step 3
+            gama = busquedaDorada(funcion,epsilon1,x0,s0)
+            k=1
+            sk_min1= s0
+            xk = gama
+            dev_xk=np.array(gradiente(funcion,xk))
+            terminar = 0
+            
+            while terminar != 1:
+                #step 4
+                sk = -(dev_xk) + np.dot(np.divide(np.sum(dev_xk)**2,np.sum(grad)**2), sk_min1)
+                sk_min1 = sk
+                #step5
+                gama_xk=busquedaDorada(funcion,0.001,xk,sk)
+                # print(gama_xk)
+                #step 6
+                q1 = (gama_xk[1] - gama_xk[0])/gama_xk[0]
+                q2 = np.mean(gama_xk)
+                xk = gama_xk
+                if (q1/q2) < epsilon2:
+                    return sk
+                else:
+                    terminar = 0
+                    k = k+1
+                if k == 1000:
+                    terminar = 1
+
+
+Método de Newton
+
+
+.. code-block:: python
+
+    def newton_method(funcion,x0,epsilon1,epsilon2,M):
+            # step1
+            terminar=False
+            xk=x0
+            k=0
+            while not terminar:
+                # step 2
+                grad = np.array(gradiente(funcion,xk))
+                gradT=np.transpose(grad)
+                
+                # step 3
+                if np.linalg.norm(grad) < epsilon1 or k >= M:
+                    terminar=True
+                else:
+
+                    def alpha_funcion(alpha):
+                        return funcion(xk-alpha*grad)
+                    
+                    alpha = busquedaDorada(alpha_funcion,epsilon=epsilon2,a=0.0,b=1.0)
+
+                    matrix_H = hessian_matrix(f=funcion,x=xk,deltaX=0.001)
+                    Matrix_inv=inv(matrix_H) # matriz hessiana inversa
+
+                    quantity = np.dot(gradT,Matrix_inv)
+                    quantity2=np.dot(quantity,grad)
+                    
+                    # x_k1 = xk - alpha*grad
+                    x_k1 = xk-alpha*quantity
+                    
+                    #step5
+                    if np.linalg.norm(x_k1-xk)/(np.linalg.norm(xk)+0.00001) <= epsilon2:
+                        terminar = True
+                    else:
+                        k = k+1
+                        xk = x_k1
+            return xk
