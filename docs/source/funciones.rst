@@ -9,33 +9,34 @@ para ofrecer
 Métodos para funciones de una variable
 ======================================
 
-Métodos de eliminación de regiones
-----------------------------------
+- Métodos de eliminación de regiones
+------------------------------------
 
--Método de división de intervalos por la mitad
--Búsqueda de Fibonacci
--Método de la sección dorada
+- Método de división de intervalos por la mitad
+- Búsqueda de Fibonacci
+- Método de la sección dorada
 
-Métodos basados en la derivada
-------------------------------
+- Métodos basados en la derivada
+--------------------------------
 
--Método de Newton-Raphson
--Método de bisección
--Método de la secante
+- Método de Newton-Raphson
+- Método de bisección
+- Método de la secante
 
 
 Métodos para funciones multivariadas
 ====================================
 
-Métodos directos
-----------------
--Caminata aleatoria
--Método de Nelder y Mead (Simplex)
--Método de Hooke-Jeeves
+- Métodos directos
+------------------
 
-Métodos de gradiente
---------------------
+- Caminata aleatoria
+- Método de Nelder y Mead (Simplex)
+- Método de Hooke-Jeeves
 
--Método de Cauchy
--Método de Fletcher-Reeves(gradiente conjugado)
--Método de Newton
+- Métodos de gradiente
+----------------------
+
+- Método de Cauchy
+- Método de Fletcher-Reeves(gradiente conjugado)
+- Método de Newton
