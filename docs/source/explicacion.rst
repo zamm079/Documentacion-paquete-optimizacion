@@ -96,3 +96,7 @@ Golden Section Search
                     f_x2 = funcion(w2)
 
             return [a, b]
+
+
+Metodos basados en la derivada
+Newton Raphson Method
