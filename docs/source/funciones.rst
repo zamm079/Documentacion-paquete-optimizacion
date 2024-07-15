@@ -13,6 +13,9 @@ Métodos de eliminación de regiones
 -----------------------------------
 
 - Método de división de intervalos por la mitad
+.. code-block:: python
+    def wtf(x)
+        return x
 
 - Búsqueda de Fibonacci
 
