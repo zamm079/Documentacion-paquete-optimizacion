@@ -5,6 +5,8 @@ Explicacion
 Aqui se van a detallar mas sobre las funcione que tiene la libreria de 
 optimizacion
 
+
+
 Método de división de intervalos por la mitad
 
 .. code-block:: python
@@ -99,8 +101,6 @@ Golden Section Search
                 return [a, b]
 
 
-Metodos basados en la derivada
-
 Newton Raphson Method
 
 
@@ -192,10 +192,6 @@ Metodo Secante
 
             return [x1, x2]
 
-
-Metodos multivarible
-
-Métodos directos
 
 Random Walk
 
@@ -381,8 +377,6 @@ Método de Hooke-Jeeves
 
             return x
 
-
-Métodos de gradiente
 
 Método de Cauchy
 
