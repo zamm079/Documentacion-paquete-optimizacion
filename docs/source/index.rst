@@ -12,3 +12,12 @@ La optimización tiene un amplio atractivo porque es aplicable en todos los domi
 `Repositorio GitHub<https://github.com/zamm079/Paquete_optimizacion_byzamm079>`_
 
 `Paquete PyPi<https://pypi.org/project/Paquete-optimizacion-byzamm079/>`_
+
+
+.. toctree::
+   :maxdepth: 2
+   :caption: Contenido:
+
+   instalacion
+   funciones
+   
